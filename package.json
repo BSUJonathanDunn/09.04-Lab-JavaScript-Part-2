@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "name": "09.04-lab-javascript-part-2",
+  "description": "- Click Use this template, then click Open in a codespace. - Open the terminal in your codespace. - Run `npm install` to install the dependencies. - Run `npm start` to start the server. - When your application starts, the codespace recognizes the port the application is running on and displays a pop-up message to let you know that the port has been forwarded. - Click the link in the pop-up to open your application in a new browser tab. ![Port forwarding pop-up](https://docs.github.com/assets/cb-30807/mw-1440/images/help/codespaces/codespaces-port3000-toast.webp)",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BSUJonathanDunn/09.04-Lab-JavaScript-Part-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BSUJonathanDunn/09.04-Lab-JavaScript-Part-2/issues"
+  },
+  "homepage": "https://github.com/BSUJonathanDunn/09.04-Lab-JavaScript-Part-2#readme"
+}
