@@ -19,7 +19,7 @@ function isStrongPassword(password) {
         return false;
     };
 
-    if (password.indexOf("password") !== -1) {
+    if (password.toLowerCase().indexOf("password") !== -1) {
         return false;
     };
 
