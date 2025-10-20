@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:19ddbe2c1bbff83bf19b0100f7267caeee6a7c2f20089efd3261df3433fd488c
-size 1373
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login, Do It, Tell Me Your Secrets</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon/egg.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <video id="bgVideo" autoplay muted loop></video>
+    <audio id="bgAudio" autoloop loop></audio>
+    <p id="talk-box-one"></p>
+
+    <section id=login-container>
+      <h3 id="login-title">Login to Account</h3>
+
+      <form id="login-input">
+        <input type="text" class="input-box" id="username" name="username" placeholder="Username / Email">
+        <input type="password" class="input-box" id="password" name="password" placeholder="Password">
+        <input type="button" id="submit" name="submit" value="Submit" onclick="passwordDescriptor()">
+        <img src="img/eyeclosed.png" alt="Eye-Closed Password Not Visible" id="visible" onclick="passwordVisible()"
+            onmouseenter="hoverEye(true)" onmouseleave="hoverEye(false)">
+        <input type="button" id="reset" name="reset" value="Reset" onclick="resetState()">
+        <input type="button" id="ref" name="references" value="References" onClick="window.location.href='reference.html'">
+      </form>
+
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
