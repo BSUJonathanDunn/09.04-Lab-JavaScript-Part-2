@@ -1,0 +1,681 @@
+/*************************************************************************/
+/*****************Fonts for the different title versions******************/
+/*************************************************************************/
+
+@font-face {
+  font-family: 'Pixel Operator Bold';
+  src: url("../fonts/PixelOperator-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cagliostro';
+  src: url("../fonts/Cagliostro-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Eurostar';
+  src: url("../fonts/EurostarRegular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Final Fantasy 3/6 Font';
+  src: url("../fonts/Final-Fantasy-36-Font.woff") format("woff");
+  src: url("../fonts/Final-Fantasy-36-Font.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Highwind';
+  src: url("../fonts/Highwind-pndZ.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*************************************************************************/
+/*****************************General Styles******************************/
+/*************************************************************************/
+
+#login-input {
+  display: flex;
+  flex-direction: column;
+}
+
+#login-container {
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+  width: 250px;
+  align-items: center;
+  background-color: #d8d8d8;
+  border-radius: 5px;
+  border: 2px solid #929292;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#login-title{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:#a09f9f;
+  text-shadow:      
+     1px 1px 2px rgba(56, 56, 56, 0.8),
+    -1px -1px 2px rgba(56, 56, 56, 0.8),
+     1px -1px 2px rgba(56, 56, 56, 0.8),
+    -1px 1px 2px rgba(56, 56, 56, 0.8);
+}
+
+#talk-box-one {
+  display: inline-block;
+  position: absolute;
+  transition: display 3s ease-in;
+  width: 400px;
+
+}
+
+#submit, #reset, #ref {
+  width: 175px;
+  height: 28px;
+  margin-top: 12px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #f0f0f0;
+  color:#919191;
+  border: 2px solid #929292;
+  border-radius: 4px;
+}
+
+#submit:hover, #reset:hover, #ref:hover {
+  background-color: #ffffff;
+  color: #353535;
+  box-shadow:#353535;
+  text-shadow: 1px 1px 2px #9e9e9e, -1px -1px 2px #9e9e9e,
+    1px -1px 2px #9e9e9e, -1px 1px 2px #9e9e9e;
+  border: 2px solid #000000;
+  transition: all 200ms ease-in-out 0;
+}
+
+#visible {
+  width: 20px;
+  height: 20px;
+  position:absolute;
+  left: 205px;
+  top: 112px; 
+  cursor: pointer;
+}
+
+#visible:hover {
+  src: ""
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.input-box {
+  border-radius: 4px;
+  margin-bottom: 10px;
+  height: 30px;
+  width: 210px;
+  border: 2px solid #929292;
+  background-color: #f0f0f0;
+}
+
+.input-box:focus {
+  background-color: #fff;
+}
+
+#bodyref {
+  background-color: #000000;
+}
+
+#references {
+  position: relative;
+  overflow: scroll;
+  height: 700px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Pixel Operator Bold', sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 3px solid #ff0000;
+  box-shadow: 5px 5px 5px #ff0000, -5px -5px 5px #ff0000,
+    -5px 5px 5px #ff0000, 5px -5px 5px #ff0000;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #2e2d2d;
+}
+
+#references li {
+  list-style: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#references a {
+  color: #ff0000;
+  text-decoration: none;
+  transition: all 200ms ease-in;
+}
+
+#references a:hover {
+  color: #bd4c4c;
+}
+
+#references::-webkit-scrollbar {
+  width: 10px;
+}
+
+#references::-webkit-scrollbar-track {
+  background: #2e2d2d;
+  border-radius: 10px;
+}
+
+#references::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+#references::-webkit-scrollbar-thumb:hover {
+  background: #d44444;
+}
+
+#go-back {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  font-size: 30pt;
+}
+
+/*************************************************************************/
+/*************************Login Container Styles**************************/
+/*************************************************************************/
+
+/******Undertale - Waterfall******/
+
+#login-container.waterfall {
+  transform: translate(-50%, -50%) translateX(-100%) translateY(10%) scale(60%);
+  animation: walking 1s infinite linear;
+  transition: transform 1s ease-in-out;
+  box-shadow: 0 20px 40px #143946;
+  background: linear-gradient(180deg, #695cb1ac, #212325);
+  border-image: linear-gradient(180deg, #695cb1ac, #212325);
+}
+
+@keyframes walking {
+  0% {transform: translate(-50%, -50%) translateX(-100%) scale(60%) translateY(-2px);}
+  25% {transform: translate(-50%, -50%) translateX(-100%) scale(60%) translateY(2px);}
+  50% {transform: translate(-50%, -50%) translateX(-100%) scale(60%) translateY(-2px);}
+  75% {transform: translate(-50%, -50%) translateX(-100%) scale(60%) translateY(2px);}
+  100% {transform: translate(-50%, -50%) translateX(-100%) scale(60%) translateY(-2px);}
+}
+
+.rain {
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background: rgba(148, 179, 240, 0.4);
+  top: -10px;
+  animation: rain-fall linear infinite;
+}
+
+@keyframes rain-fall {
+  0%   {transform: translateY(0); opacity: 0;}
+  50%  {opacity: 1;}
+  100% {transform: translateY(120%); opacity: 0;}
+}
+
+/****Undertale - Fireplace****/
+
+#login-container.fireplace {
+  transform: translate(-50%, -50%) translateX(150%) translateY(85%) scale(70%);
+  background: linear-gradient(315deg #888888 0%, rgba(255, 200, 120, 0.3) 80%, 
+    rgba(255, 140, 0, 0.25) 90%, rgba(100, 30, 0, 0.1) 100%);
+  box-shadow: -10px -10px 25px rgba(255, 170, 100, 0.5), 15px 15px 40px rgba(0, 0, 0, 0.5);
+  border-image: linear-gradient(135deg, rgba(255,200,120,0.8), rgba(255,140,0,0.6),
+    rgba(100,30,0,0.4)) 1;
+  transition: background 0.5s ease;
+  animation: fire-flicker 1.5s infinite ease-in-out; 
+  animation: shadow-flicker 2s infinite ease-in-out;
+}
+
+@keyframes fire-flicker {
+  0%, 100% {box-shadow: -10px -10px 25px rgba(255, 170, 100, 0.6);}
+  50% {box-shadow: -10px -10px 35px rgba(255, 200, 150, 0.8);}
+}
+
+@keyframes shadow-flicker {
+  0% {box-shadow: -10px -10px 25px rgba(255,170,100,0.5), 
+    15px 15px 20px rgba(0,0,0,0.4);}
+  50% {box-shadow: -10px -10px 30px rgba(255,200,150,0.6), 
+    20px 40px 22px rgba(0,0,0,0.35);}
+  100% {box-shadow: -10px -10px 25px rgba(255,170,100,0.5), 
+    15px 15px 20px rgba(0,0,0,0.4);}
+}
+
+#login-container.fireplace::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 200, 150, 0.4) 0%,
+    rgba(255, 150, 50, 0.2) 50%, transparent 100%);
+  border-radius: 50%;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+/*******Final Fantasy - FFVII*******/
+
+#login-container.ffseven {
+  transform: translate(-50%, -50%) translateX(120px) translateY(60px) scale(70%);
+  background: linear-gradient(90deg, #b8e0ffb3, #d0f0ffb3, #b8e0ffb3);
+  border-image: linear-gradient(90deg, #b8e0ffb3, #d0f0ffb3, #b8e0ffb3) 1;
+  background-size: 200% 100%;
+  animation: breeze 5s linear infinite;
+}
+
+@keyframes breeze {
+  0% {background-position: 0% 0; filter: blur(0px) brightness(1); 
+    transform: translate(-50%, -50%) translateX(50%) translateY(20%) 
+    scale(70%) skewX(0deg);}
+  50% {filter: blur(1px) brightness(1.1); transform: translate(-50%, -50%) 
+    translateX(50%) translateY(20%) scale(70%) skewX(-2deg);}
+  100% {background-position: 200% 0; filter: blur(0px) brightness(1); 
+    transform: translate(-50%, -50%) translateX(50%) translateY(20%) scale(70%) 
+    skewX(0deg);}
+}
+
+.wind {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  animation: wind 3s linear infinite;
+}
+
+@keyframes wind {
+  from {transform: translate(0, 0); opacity: 1;}
+  to {transform: translate(200px, -50px); opacity: 0;}
+}
+
+/********Final Fantasy - FFXIV*********/
+
+#login-container.fffourteen{
+  transform: translate(-50%, -50%) translateX(50%) translateY(10%);
+  background: radial-gradient(circle at 50% 50%, #c7e6ff 0%, 
+  #7a9ab7 40%, #1a1f28 100%);
+  border: 2px solid rgba(200, 220, 255, 0.6);
+  box-shadow: 0 0 20px rgba(200, 230, 255, 0.6), 0 0 40px rgba(150, 200, 255, 0.3);
+  backdrop-filter: blur(4px);
+  animation: space-glow 6s ease-in-out infinite alternate;
+}
+
+@keyframes space-glow {
+  0% {box-shadow: 0 0 20px rgba(200, 230, 255, 0.6), 0 0 40px rgba(150, 200, 255, 0.3);
+    transform: translate(-50%, -50%) translateX(50%) translateY(10%) scale(90%);}
+  100% {box-shadow: 0 0 35px rgba(200, 230, 255, 0.9), 0 0 70px rgba(150, 200, 255, 0.4);
+    transform: translate(-50%, -50%) translateX(50%) translateY(10%) scale(100%);}
+}
+
+.souls {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: star-drift 8s linear infinite;
+}
+
+@keyframes star-drift {
+  from {transform: translate(0, 0) scale(1); opacity: 0.8;}
+  to {transform: translateY(-1000px) scale(0.6); opacity: 0;}
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: star-blink 3s ease-in-out infinite alternate;
+}
+
+@keyframes star-blink {
+  from {opacity: 0.2;}
+  to {opacity: 1;}
+}
+
+/**********Final Fantasy - FFVI**********/
+
+#login-container.ffsix {
+  transform: translate(-50%, -50%) translateX(90%) translateY(-80px) 
+  scale(80%);
+  background: linear-gradient(180deg, #4a4f63, #2a2f3d); 
+  border: 2px solid rgba(200, 220, 255, 0.4);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(180, 200, 255, 0.2);
+  animation: snow-pulse 3s ease-in-out infinite, gentle-sway 8s 
+    ease-in-out infinite, leap-back-forth 3s ease-in-out infinite;
+}
+
+@keyframes leap-back-forth {
+  0%   {transform: translate(-50%, -50%) translateX(90%) translateY(-25%) 
+    rotate(0deg) scale(80%);}
+  25%  {transform: translate(-50%, -50%) translateX(80%) translateY(-20%) 
+    rotate(-5deg) scale(80%);}
+  50%  {transform: translate(-50%, -50%) translateX(90%) translateY(-25%) 
+    rotate(0deg) scale(80%);}
+  75%  {transform: translate(-50%, -50%) translateX(100%) translateY(-20%) 
+    rotate(5deg) scale(80%);}
+  100% {transform: translate(-50%, -50%) translateX(90%) translateY(-25%) 
+    rotate(0deg) scale(80%);}
+}
+
+@keyframes snow-pulse {
+  0%, 100% {box-shadow: 0 0 15px rgba(180, 200, 255, 0.3);}
+  50% {box-shadow: 0 0 30px rgba(200, 220, 255, 0.9);}
+}
+
+.snow {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #ffffff;
+  opacity: 0.7;
+  border-radius: 50%;
+  animation: snow-fall linear infinite;
+}
+
+@keyframes snow-fall {
+  0% {transform: translateY(-500px); opacity: 0;}
+  10% {opacity: 1;}
+  100% {transform: translateY(300px); opacity: 0;}
+}
+
+/**********Guild Wars 2 - Planetarium***********/
+
+#login-container.guildwarstwo {
+  transform: translate(-50%, -50%) scale(85%);
+  background: linear-gradient(180deg, rgba(250, 255, 245, 0.85),
+  rgba(230, 250, 230, 0.85));
+  border: 2px solid rgba(180, 210, 180, 0.5);
+  box-shadow: 0 0 15px rgba(255, 255, 200, 0.3), 0 0 40px rgba(200, 255, 200, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  animation: sunlight-pulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes sunlight-pulse {
+  0%   {transform: translate(-50%, -50%) rotate(-1deg) scale(85%); 
+    box-shadow: 0 0 15px rgba(255, 255, 200, 0.3);}
+  100% {transform: translate(-50%, -50%) rotate(1deg) scale(85%); 
+    box-shadow: 0 0 25px rgba(255, 255, 200, 0.6);}
+}
+
+.pollen {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 200, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: pollen-drift linear infinite;
+}
+
+@keyframes pollen-drift {
+  0%   {transform: translate(0, 0) scale(1); opacity: 0.8;}
+  50%  {opacity: 1;}
+  100% {transform: translate(40px, -30px) scale(0.8); opacity: 0;}
+}
+
+/*********Ragnarok Online - Prontera**********/
+
+#login-container.ragnarok {
+  transform: translate(-50%, -50%) translateY(-80%) scale(85%);
+  background: repeating-linear-gradient(45deg, #f3f3f3, #f3f3f3 20px,
+    #e7e7e7 20px, #e7e7e7 40px);
+  border: 3px solid #b5b5b5;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 35px rgba(200, 200, 255, 0.4);
+  backdrop-filter: blur(3px);
+  animation: prontera 4s ease-in-out infinite alternate;
+}
+
+@keyframes prontera {
+  0%   {box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);}
+  100% {box-shadow: 0 0 25px rgba(200, 200, 255, 0.8);}
+}
+
+/*Surrounding box around login-container*/
+#login-container.ragnarok::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 16px;
+  border: 2px solid rgba(255, 220, 150, 0.5);
+  box-shadow: 0 0 20px rgba(255, 215, 150, 0.3);
+  pointer-events: none;
+}
+
+.petals {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 182, 193, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: petal-drift linear infinite;
+}
+
+@keyframes petal-drift {
+  0%   {transform: translate(0, 0) rotate(0deg); opacity: 1;}
+  100% {transform: translate(-50px, 80px) rotate(360deg); opacity: 0;}
+}
+
+/*************************************************************************/
+/***************************Login Title Styles****************************/
+/*************************************************************************/
+
+/******Undertale - Fireplace*******/
+
+#login-title.fireplace {
+  font-family: 'Pixel Operator Bold', serif;
+  color: #ffffff;
+}
+
+/*******Undertale - Waterfall******/
+
+#login-title.waterfall {
+  font-family: 'Pixel Operator Bold', serif;
+  color: #ffffff;
+}
+
+/*******Final Fantasy - FFVII*******/
+
+#login-title.fffourteen {
+  font-family: 'Eurostar', Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  color: #e6f7ff;
+  text-shadow: 0 0 10px rgba(150, 200, 255, 0.8), 0 0 20px rgba(100, 150, 255, 0.6);
+}
+
+/********Final Fantasy - FFVI*******/
+
+#login-title.ffsix {
+  font-family: 'Final Fantasy 3/6 Font', serif;
+  letter-spacing: 2px;
+  color: #fff;
+  animation: title-snow-pulse 6s ease-in-out infinite;
+}
+
+@keyframes title-snow-pulse {
+  0% {text-shadow: 5px 0px rgba(180, 200, 255, 0.3), -5px 0px rgba(180, 200, 255, 0.3),
+    0px 5px rgba(180, 200, 255, 0.3), 0px -5px rgba(180, 200, 255, 0.3), 
+    -5px 5px rgba(180, 200, 255, 0.3), -5px -5px rgba(180, 200, 255, 0.3), 
+    5px 5px rgba(180, 200, 255, 0.3), 5px -5px rgba(180, 200, 255, 0.3);}
+  50% { text-shadow: 1px 1px rgba(200, 220, 255, 0.1); }
+  100% {text-shadow: 5px 0px rgba(180, 200, 255, 0.3), -5px 0px rgba(180, 200, 255, 0.3),
+    0px 5px rgba(180, 200, 255, 0.3), 0px -5px rgba(180, 200, 255, 0.3), 
+    -5px 5px rgba(180, 200, 255, 0.3), -5px -5px rgba(180, 200, 255, 0.3), 
+    5px 5px rgba(180, 200, 255, 0.3), 5px -5px rgba(180, 200, 255, 0.3);}
+}
+
+/********Final Fantasy - FFVII******/
+
+#login-title.ffseven {
+  font-family: 'Highwind';
+  font-size: 22pt;
+  letter-spacing: 2px;
+  color: #c8dfe9;
+}
+
+/********Guild Wars 2********/
+
+#login-title.guildwarstwo {
+  font-family: 'Cagliostro', Georgia, serif;
+  letter-spacing: 2px;
+  color: #fcff5c
+}
+
+/********Ragnarok Online*********/
+
+#login-title.ragnarok {
+  font-family: 'Tahoma', sans-serif;
+  font-weight: bold;
+  color: #2f2f2f;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.9), 0 0 8px rgba(200, 200, 255, 0.6);
+  letter-spacing: 1px;
+}
+
+/*************************************************************************/
+/***************************Login Title Styles****************************/
+/*************************************************************************/
+
+/**************Common Animation***************/
+
+@keyframes floatLazy {
+  0%   {transform: translateY(0px) rotate(0deg);}
+  25%  {transform: translateY(-3px) rotate(-1deg);}
+  50%  {transform: translateY(2px) rotate(1deg);}
+  75%  {transform: translateY(-2px) rotate(-0.5deg);}
+  100% {transform: translateY(0px) rotate(0deg);}
+}
+
+/******Undertale - Fireplace*********/
+
+#talk-box-one.fireplace {
+  color: #ffffff;
+  font-size: 40px;
+  text-shadow: 4px 0 0px #3f1b05;
+  top: 45%;
+  left: 75%;
+  animation: floatLazy 7s ease-in-out infinite alternate;
+}
+
+/********Undertale - Waterfall*********/
+
+#talk-box-one.waterfall {
+  color: #ffffff;
+  font-size: 40px;
+  top: 10%;
+  left: 40%;
+  animation: floatLazy 7s ease-in-out infinite alternate;
+}
+
+/*********Final Fantasy - FFVII**********/
+
+#talk-box-one.ffseven {
+  color: #ffffff;
+  text-shadow: 3px 1px #000000;
+  font-size: 40px;
+  top: 20%;
+  left: 70%;
+  animation: wind-flow-talk 5s linear infinite;
+}
+
+@keyframes wind-flow-talk {
+  0% {background-position: 0% 0; filter: blur(0px) brightness(1); 
+    transform: translate(-50%, -50%) translateX(120px) translateY(60px) skewX(0deg);}
+  50% {filter: blur(1px) brightness(1.1); transform: translate(-50%, -50%) 
+    translateX(120px) translateY(70px) skewX(-2deg);}
+  100% {background-position: 200% 0; filter: blur(0px) brightness(1); 
+    transform: translate(-50%, -50%) translateX(120px) translateY(60px) skewX(0deg);}
+}
+
+/*********Final Fantasy - FFXIV************/
+
+#talk-box-one.fffourteen {
+  color: #ffffff;
+  font-size: 40px;
+  top: 35%;
+  left: 20%;
+  animation: floatLazy 7s ease-in-out infinite alternate;
+}
+
+/*********Final Fantasy - FFVI**************/
+
+#talk-box-one.ffsix {
+  color: #ffffff;
+  font-size: 40px;
+  top: 3%;
+  left: 69%;
+  animation: floatLazy 7s ease-in-out infinite alternate;
+}
+
+/***********Guild Wars 2*************/
+
+#talk-box-one.guildwarstwo {
+  color: #ffffff;
+  font-size: 40px;
+  text-shadow: 3px 0px 3px #000000;
+  top: 10%;
+  left: 60%;
+  animation: floatLazy 7s ease-in-out infinite alternate;
+}
+
+/**********Ragnarok Online************/
+
+#talk-box-one.ragnarok {
+  color: #ffffff;
+  text-shadow: 5px 0px 2px #000000;
+  font-size: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float-ragnarok 7s ease-in-out infinite alternate;
+}
+
+@keyframes float-ragnarok {
+  0%   {transform: translate(-50%, -50%) translateY(0px) rotate(0deg);}
+  25%  {transform: translate(-50%, -50%) translateY(-3px) rotate(-1deg);}
+  50%  {transform: translate(-50%, -50%) translateY(2px) rotate(1deg);}
+  75%  {transform: translate(-50%, -50%) translateY(-2px) rotate(-0.5deg);}
+  100% {transform: translate(-50%, -50%) translateY(0px) rotate(0deg);}
+}
